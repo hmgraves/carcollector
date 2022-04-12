@@ -11,13 +11,13 @@ p {
 .nav-wrapper {
 	display: flow-root;
 	background-color: gray;
-	padding-right: 20px
+	padding-right: 20px;
 }
 
 .left-brand-logo {
 	float: left;
 	font-size: 35px;
-	color: white
+	color: white;
 }
 
 .right {

@@ -1,6 +1,8 @@
 import imp
 from operator import mod
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+
+from main_app.forms import MaintenanceForm
 from .models import Car
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
@@ -17,7 +19,16 @@ def cars_index(request):
 
 def cars_detail(request, car_id):
 	car = Car.objects.get(id=car_id)
-	return render(request, 'cars/detail.html', { 'car': car })
+	maintenance_form = MaintenanceForm()
+	return render(request, 'cars/detail.html', { 'car': car, 'maintenance_form': maintenance_form })
+
+def add_maintenance(request, car_id):
+	form = MaintenanceForm(request.POST)
+	if form.is_valid():
+		new_maintenance = form.save(commit=False)
+		new_maintenance.car_id = car_id
+		new_maintenance.save()
+	return redirect('detail', car_id=car_id)
 
 class CarCreate(CreateView):
 	model = Car

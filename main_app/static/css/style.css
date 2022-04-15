@@ -39,14 +39,14 @@ li, a {
 }
 
 .layout {
-	justify-content: center !important;
+	justify-content: center;
 	display: grid;
 }
 
 .container {
 	margin: 0 auto;
 	display: border-box;
-	width: 70%;
+	/* width: 70%; */
 }
 
 .cards {
@@ -62,7 +62,7 @@ li, a {
 	width: 300px;
 	padding: 24px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	color: #4fe8bd;
+	color: #026670;
 	align-items: center;
 }
 
@@ -157,4 +157,8 @@ a.edit, a.delete {
 
 a.edit:hover, a.delete:hover {
 	opacity: 50%;
+}
+
+label {
+	color:#026670;
 }

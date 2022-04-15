@@ -8,9 +8,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Car Collector</title>
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,6 +25,8 @@
 				</ul>
 				<ul class="right">
 					<li><a href="{% url 'about' %}">About</a></li>
+					<li><a href="{% url 'options_create' %}">Add an Option</a></li>
+					<li><a href="{% url 'options_index' %}">View All Options</a></li>
 					<li><a href="{% url 'cars_create' %}">Add a new car</a></li>
 					<li><a href="{% url 'index' %}">View all cars</a></li>
 				</ul>
@@ -32,7 +37,7 @@
 		{% block content %}
 		{% endblock %}
 	</main>
-	<footer class="page-footer">
+	<footer class="footer">
 		<div class="right">All Rights Reserved, &copy; 2022 Car Collector &nbsp;</div>
 	</footer>
 </body>

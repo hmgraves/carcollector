@@ -1,3 +1,4 @@
+from operator import mod
 from django.urls import reverse
 from django.db import models
 
@@ -8,12 +9,25 @@ TYPES = (
 	('T', 'Tires'),
 	('W', 'Windshield wipers')
 )
+
+class Option(models.Model):
+	options = models.CharField(max_length=100)
+
+	def __str__(self):
+		return self.options
+	
+	def get_absolute_url(self):
+		return reverse('options_detail', kwargs={'pk': self.id})
+
+
 class Car(models.Model):
 	year = models.IntegerField()
 	make = models.CharField(max_length=100)
 	model = models.CharField(max_length=100)
 	color = models.CharField(max_length=100, default='')
 	mileage = models.IntegerField()
+	fuel = models.CharField(max_length=100, default='')
+	options = models.ManyToManyField(Option)
 
 	def __str__(self):
 		return self.model

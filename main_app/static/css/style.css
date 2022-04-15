@@ -1,7 +1,10 @@
 body {
-	background-color: peachpuff;
+	background-color: #edeae5;
 	margin: 0;
-	display: flow-root;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	font-family: 'Raleway', sans-serif;
 }
 
 p {
@@ -10,14 +13,14 @@ p {
 
 .nav-wrapper {
 	display: flow-root;
-	background-color: gray;
+	background-color: #026670;
 	padding-right: 20px;
 }
 
 .left-brand-logo {
 	float: left;
 	font-size: 35px;
-	color: white;
+	color:#fef9c7;
 }
 
 .right {
@@ -30,19 +33,128 @@ li, a {
 	display: inline;
 }
 
-.card-content {
-	border: 1px black solid;
+.right > li > a {
+	padding-left: 10px;
+	color:#fef9c7;
+}
+
+.layout {
+	justify-content: center !important;
+	display: grid;
+}
+
+.container {
+	margin: 0 auto;
+	display: border-box;
+	width: 70%;
+}
+
+.cards {
+	display: inline-block;
 	margin: 20px;
-	border-radius: 5px;
+}
+
+.card-content {
+	margin: 20px;
+	border-radius: 20px;
 	text-align: center;
+	background-color: #fef9c7;
+	width: 300px;
+	padding: 24px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	color: #4fe8bd;
+	align-items: center;
+}
+
+.actions {
+	background-color: #fce181 !important;
+	margin-right: 20px;
+	margin-left: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	color:#026670;
+	font-size: medium;
+}
+
+.card-action > a {
+	padding: 50px;
+}
+
+.card-action > a:hover {
+	opacity: 50%;
+}
+
+.card-title {
+	font-size: 30px;
+	text-decoration: underline;
 }
 
 h1 {
 	padding-left: 20px;;
 }
 
-footer {
-	position: absolute;
+.new-form {
+	align-items: center;
+	text-align: center;
+	display: grid;
+	flex-direction: column;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 5px;
+	width: 600px;
+	margin: 0 auto;
+	background-color: #fef9c7;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+td > input {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #026670;
+	width: 318px;
+	height: 50px;
+	font-size: medium;
+	text-align: center;
+}
+
+.add-btn {
+	background-color: #fce181 !important;
+	color:#026670 !important;
+	border: none;
+	margin: 0 auto;
+	width: 300px;
+	height: 50px;
+	border-radius: 10px !important;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	display: block !important;
+	font-size: medium;
+}
+
+.add-btn:hover {
+	opacity: 50%;
+	cursor: pointer;
+}
+
+.footer {
+	background-color: #026670;
 	bottom: 0;
 	padding: 5px;
+	color:#fef9c7;
+	margin-top: auto;
+}
+ 
+.row .column {
+	 box-sizing: flex;
+}
+
+a.edit, a.delete {
+	color: #026670;
+	padding: 25px
+}
+
+a.edit:hover, a.delete:hover {
+	opacity: 50%;
 }

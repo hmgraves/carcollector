@@ -16,4 +16,5 @@ urlpatterns = [
 	path('options/<int:pk>/update/', views.OptionUpdate.as_view(), name='options_update'),
 	path('options/<int:pk>/delete/', views.OptionDelete.as_view(), name='options_delete'),
 	path('cars/<int:car_id>/assoc_option/<int:option_id>', views.assoc_option, name='assoc_option'),
+	path('accounts/signup/', views.signup, name='signup'),
 ]
